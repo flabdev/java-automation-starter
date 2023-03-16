@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression Test of PathPresenter">
+
+    <test name="PathPresenter API Test">
+        <classes>
+            <class name="api.tests.PathPresenterAPITestSuite"/>
+        </classes>
+    </test>
+
+</suite>
