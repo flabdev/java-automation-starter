@@ -13,14 +13,5 @@ public class DataProviders {
 		String login_password = propertyFileReader.getValue("PASSWORD");
 		return new Object[][] { { login_username, login_password } };
 	}
-	
-	@DataProvider(name = "GroupsEmailsDataProvider")
-	public Object[][] GroupEmails() {
-		PropertyFileReader propertyFileReader = new PropertyFileReader(
-				System.getProperty("user.dir") + "/src/test/resources/Data.properties");
-		String email1 = propertyFileReader.getValue("EmailAddress_1");
-		String email2 = propertyFileReader.getValue("EmailAddress_2");
-		return new Object[][] { { email1, email2 } };
-	}
 
 }
