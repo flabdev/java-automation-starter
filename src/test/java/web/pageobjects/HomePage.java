@@ -13,23 +13,22 @@ public class HomePage {
 		this.driver = driver;
 	}
 
-	public By dashboard_dropdown = By
-			.xpath("//li[@class='nav-item b-nav-dropdown dropdown' and @variant='primary']//span");
-	public By profile_dropdown = By.xpath("(//li[@class='nav-item b-nav-dropdown dropdown'])[2]");
-	public By my_groups = By.xpath("//ul[@class='dropdown-menu dropdown-menu-right show']//i[@class='fa fa-users']");
+	public By header_title_message = By.xpath("//div[@class='app_logo']");
+	public By menu = By.xpath("//button[@id='react-burger-menu-btn']");
+	public By logout = By.xpath("//a[@id='logout_sidebar_link']");
 
-	public HomePage validateDashboard() throws IOException {
-		WebUI.assertElement(dashboard_dropdown, "Validating Dashboard droddown is displaying", true);
+	public HomePage validateHeaderMessageAfterLogin() throws IOException {
+		WebUI.assertTextEquals(header_title_message, "Swag Labs", "Validate Header Message After Login", true);
 		return this;
 	}
 
-	public HomePage clickOnProfileDropdown() throws IOException {
-		WebUI.click(profile_dropdown, "Click on Profile Dropdown", false, false, 2);
+	public HomePage clickOnMenu() throws IOException {
+		WebUI.click(menu, "Click on Menu", false, false, 2);
 		return this;
 	}
 
-	public HomePage clickOnMyGroups() throws IOException {
-		WebUI.click(my_groups, "Click on My Groups", false, false, 2);
+	public HomePage clickOnLogout() throws IOException {
+		WebUI.click(logout, "Click on Logout", false, true, 2);
 		return this;
 	}
 

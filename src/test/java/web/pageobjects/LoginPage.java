@@ -13,9 +13,9 @@ public class LoginPage {
 		this.driver = driver;
 	}
 
-	public By email_address_field = By.xpath("//input[@name='email']");
-	public By password_field = By.xpath("//input[@name='password']");
-	public By login_button = By.xpath("//button[@aria-label='login']");
+	public By username_field = By.xpath("//input[@id='user-name']");
+	public By password_field = By.xpath("//input[@id='password']");
+	public By login_button = By.xpath("//input[@id='login-button']");
 
 	public LoginPage navigateURL(String url) throws IOException, InterruptedException {
 		WebUI.navigateURL(url);
@@ -23,8 +23,8 @@ public class LoginPage {
 		return this;
 	}
 
-	public LoginPage enterEmailAddress(String userName) throws IOException {
-		WebUI.sendKeys(email_address_field, userName, "Enter Email Address");
+	public LoginPage enterUsername(String userName) throws IOException {
+		WebUI.sendKeys(username_field, userName, "Enter Email Address");
 		return this;
 	}
 
@@ -34,7 +34,7 @@ public class LoginPage {
 	}
 
 	public LoginPage clickOnLoginButton() throws IOException {
-		WebUI.click(login_button, "Click on Login Button", false, false, 2);
+		WebUI.click(login_button, "Click on Login Button", true, false, 2);
 		return this;
 	}
 }

@@ -4,7 +4,7 @@
 
     <test name="Smoke Test">
         <classes>
-            <class name="web.tests.PPTestSuite"/>
+            <class name="web.tests.SauceDemoSuite"/>
         </classes>
     </test>
 
